@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vježba formi</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <caption>
+        Forma koja šalje GET metodom
+      </caption>
+      <br />
+      <label for="ime">Unesi svoje ime:</label>
+      <input type="text" name="ime" id="ime" required />
+      <br />
+      <label for="mojbroj">Unesi omiljeni višekratnik broja 5:</label>
+      <input
+        type="number"
+        name="mojbroj"
+        id="mojbroj"
+        value="3"
+        step="5"
+        required
+      />
+      <br />
+      <textarea name="message" rows="10" cols="30">
+        The cat was playing in the garden.
+        </textarea
+      >
+      <br />
+      <fieldset>
+        <legend>Osobni podatci:</legend>
+        <label for="fname">First name:</label><br />
+        <input type="text" id="fname" name="fname" value="John" /><br />
+        <label for="lname">Last name:</label><br />
+        <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+      </fieldset>
+      <fieldset>
+        <legend>Omiljene stvari::</legend>
+        <label for="fname">Omiljena boja:</label><br />
+        <input type="text" id="fname" name="fname" value="John" /><br />
+        <label for="lname">Omiljena pijesma:</label><br />
+        <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+      </fieldset>
+      <br />
+      <label for="cars">Choose a car:</label>
+      <select id="cars" name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </select>
+      <br />
+      <label for="vol">Volume (between 0 and 50):</label>
+      <input type="range" id="vol" name="vol" min="0" max="50" />
+      <br />
+      <!--Odabir omiljenog jezika-->
+      <input type="radio" id="html" name="fav_language" value="HTML" />
+      <label for="html">HTML</label><br />
+      <input type="radio" id="css" name="fav_language" value="CSS" />
+      <label for="css">CSS</label><br />
+      <input
+        type="radio"
+        id="javascript"
+        name="fav_language"
+        value="JavaScript"
+      />
+      <label for="javascript">JavaScript</label><br />
+      <!--botun za slanje-->
+      <input type="submit" value="Pošalji formu" />
+    </form>
+    <br />
+    <br />
+    <form action="" method="post" enctype="multipart/form-data">
+      <caption>
+        Forma koja šalje POST metodom
+      </caption>
+      <br />
+      <input
+        type="text"
+        maxlength="10"
+        name="ime"
+        placeholder="unesite svoje ime"
+      />
+      <br />
+      <label for="avatar">Prenesi svoj avatar:</label>
+      <input type="file" name="avatar" id="avatar" />
+      <br />
+      <input list="browsers" />
+      <datalist id="browsers">
+        <option value="Internet Explorer"></option>
+        <option value="Firefox"></option>
+        <option value="Chrome"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+      </datalist>
+
+      <br />
+      <label>Tvoja tarifa</label>
+      <input type="text" name="moj" disabled value="start" />
+      <br />
+      <input type="submit" value="Pošalji formu" />
+    </form>
+  </body>
+</html>
